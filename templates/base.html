@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Мониторинг справок колледжа{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <nav class="navbar">
+                <div class="nav-container">
+                    <h1 class="nav-logo">Колледж - Мониторинг справок</h1>
+                    <ul class="nav-menu">
+                        <li><a href="{{ url_for('index') }}">Главная</a></li>
+                        <li><a href="{{ url_for('order_certificate') }}">Заказать справку</a></li>
+                        <li><a href="{{ url_for('student_dashboard') }}">Мои справки</a></li>
+                        <li><a href="{{ url_for('check_status') }}">Проверить статус</a></li>
+                        {% if session.get('role') == 'secretary' %}
+                            <li><a href="{{ url_for('secretary_dashboard') }}">Панель секретаря</a></li>
+                            <li><a href="{{ url_for('secretary_logout') }}">Выйти</a></li>
+                        {% else %}
+                            <li><a href="{{ url_for('secretary_login') }}">Вход для секретаря</a></li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <main class="main">
+            <div class="container">
+                {% block content %}{% endblock %}
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+                <p>&copy; 2025 Колледж. Система мониторинга справок</p>
+            </div>
+        </footer>
+    </div>
+
+    {% block scripts %}{% endblock %}
+</body>
+</html>

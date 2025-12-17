@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="order-form">
+    <h2>Заказ справки</h2>
+    <form method="POST">
+        <div class="form-group">
+            <label for="student_name">ФИО студента:</label>
+            <input type="text" id="student_name" name="student_name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="student_group">Группа:</label>
+            <input type="text" id="student_group" name="student_group" required>
+        </div>
+
+        <div class="form-group">
+            <label for="birth_date">Дата рождения:</label>
+            <input type="date" id="birth_date" name="birth_date" required>
+        </div>
+
+        <div class="form-group">
+            <label for="request_place">Место требования справки:</label>
+            <input type="text" id="request_place" name="request_place" required>
+        </div>
+
+        <div class="form-group">
+            <label for="quantity">Количество справок:</label>
+            <input type="number" id="quantity" name="quantity" value="1" min="1" max="10" required>
+        </div>
+
+        <div class="form-group">
+            <label for="comment">Комментарий (необязательно):</label>
+            <textarea id="comment" name="comment" rows="3"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Заказать справку</button>
+    </form>
+</div>
+{% endblock %}

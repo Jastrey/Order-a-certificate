@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="check-status">
+    <h2>🔍 Проверить статус справки</h2>
+    
+    <form method="GET" action="{{ url_for('check_status') }}" class="status-form">
+        <div class="form-group">
+            <label for="certificate_id">Номер справки (ID):</label>
+            <input type="number" min= '1' id="certificate_id" name="id"
+                   value="{{ request.args.get('id', '') }}"
+                   placeholder="Введите номер справки" required>
+            <small>Номер справки можно найти в подтверждении заказа</small>
+        </div>
+        <button type="submit" class="btn btn-primary">Проверить статус</button>
+    </form>
+
+    {% if certificate %}
+    <div class="certificate-status">
+        <div class="status-card status-{{ certificate.status.replace(' ', '-') }}">
+            <h3>Справка #{{ certificate.id }}</h3>
+            <div class="status-info">
+                <p><strong>Статус:</strong> <span class="status-badge">{{ certificate.status }}</span></p>
+                <p><strong>Студент:</strong> {{ certificate.student_name }}</p>
+                <p><strong>Группа:</strong> {{ certificate.student_group }}</p>
+                <p><strong>Дата рождения:</strong> {{ certificate.birth_date }}</p>
+                <p><strong>Место требования:</strong> {{ certificate.request_place }}</p>
+                <p><strong>Количество:</strong> {{ certificate.quantity }} шт.</p>
+				<p><strong>Дата заказа:</strong> {{ certificate.created_at }}</p>
+				<p><strong>Последнее обновление:</strong> {{ certificate.updated_at }}</p>
+            </div>
+        </div>
+    </div>
+    {% elif request.args.get('id') %}
+    <div class="alert alert-error">
+        <h3>Справка не найдена</h3>
+        <p>Справка с номером {{ request.args.get('id') }} не найдена. Проверьте правильность номера.</p>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,441 @@
+html, body {
+    height: 100%;
+}
+
+/* Стили для карточек справок */
+.certificates-list {
+    display: grid;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.certificate-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border-left: 4px solid #ddd;
+}
+
+.certificate-card.status-в-работе {
+    border-left-color: #ffc107;
+}
+
+.certificate-card.status-готово {
+    border-left-color: #28a745;
+}
+
+.certificate-card.status-отклонено {
+    border-left-color: red;
+}
+
+.certificate-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.certificate-header h3 {
+    margin: 0;
+    color: #2c3e50;
+}
+
+.certificate-info p {
+    margin: 0.5rem 0;
+}
+
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;*/
+}
+
+.main {
+    flex-grow: 1;
+}
+
+/* Стили для формы проверки статуса */
+.status-form {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+.status-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border-left: 4px solid #ddd;
+}
+
+.status-card.status-в-работе {
+    border-left-color: #ffc107;
+}
+
+.status-card.status-готово {
+    border-left-color: #28a745;
+}
+
+.status-card.status-отклонено {
+    border-left-color: red;
+}
+
+.status-info p {
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+}
+
+/* Пустое состояние */
+.empty-state {
+    text-align: center;
+    padding: 3rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.empty-state h3 {
+    color: #6c757d;
+    margin-bottom: 1rem;
+}
+
+/* Информация в футере */
+.footer-info {
+    font-size: 0.9rem;
+    color: #6c757d;
+    margin-top: 1rem;
+}
+
+.page-description {
+    color: #6c757d;
+    margin-bottom: 2rem;
+}
+
+.search-form {
+    display: flex;
+    gap: 1rem;
+    align-items: end;
+}
+
+.search-form input {
+    flex: 1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Навигация */
+.navbar {
+    background: #2c3e50;
+    color: white;
+    padding: 1rem 0;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #3498db;
+}
+
+/* Кнопки */
+.btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: #3498db;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #2980b9;
+}
+
+.btn-primary {
+    background: #3498db;
+}
+
+.btn-primary:hover {
+    background: #2980b9;
+}
+
+.btn-secondary {
+    background: #95a5a6;
+}
+
+.btn-secondary:hover {
+    background: #7f8c8d;
+}
+
+.btn-small {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+}
+
+/* Главная страница */
+.hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-buttons {
+    margin-top: 2rem;
+}
+
+.hero-buttons .btn {
+    margin: 0 0.5rem;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 4rem 0;
+}
+
+.feature-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.feature-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+/* Форма заказа */
+.order-form {
+    max-width: 600px;
+    margin: 2rem auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.order-form h2 {
+    margin-bottom: 2rem;
+    color: #2c3e50;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+/* Дашборд */
+.dashboard {
+    padding: 2rem 0;
+}
+
+.filters {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+    display: flex;
+    gap: 1rem;
+    align-items: end;
+}
+
+.filters input,
+.filters select {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.stat-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.stat-card h3 {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.stat-card span {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.certificates-table {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.certificates-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.certificates-table th,
+.certificates-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.certificates-table th {
+    background: #f8f9fa;
+    font-weight: bold;
+    color: #555;
+}
+
+.certificates-table tr:hover {
+    background: #f8f9fa;
+}
+
+.status-select {
+    padding: 0.25rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Сообщение об успехе */
+.success-message {
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.success-message h2 {
+    color: #27ae60;
+    margin-bottom: 1rem;
+}
+
+.success-buttons {
+    margin-top: 2rem;
+}
+
+.success-buttons .btn {
+    margin: 0 0.5rem;
+}
+
+/* Футер */
+.footer {
+    background: #34495e;
+    color: white;
+    text-align: center;
+    padding: 2% 0;
+    margin-top: 4rem;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .filters {
+        flex-direction: column;
+    }
+    
+    .certificates-table {
+        overflow-x: auto;
+    }
+    
+    .certificates-table table {
+        min-width: 800px;
+    }
+}

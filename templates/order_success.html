@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="success-message">
+    <h2>✅ Заказ справки успешно создан!</h2>
+    <p>Ваша справка была успешно заказана. Вы можете отслеживать её статус на странице мониторинга.</p>
+    <div class="success-buttons">
+        <a href="{{ url_for('student_dashboard') }}" class="btn btn-primary">Перейти к мониторингу</a>
+        <a href="{{ url_for('order_certificate') }}" class="btn btn-secondary">Заказать ещё одну справку</a>
+    </div>
+</div>
+{% endblock %}
